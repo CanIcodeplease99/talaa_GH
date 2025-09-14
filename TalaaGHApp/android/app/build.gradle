@@ -18,6 +18,26 @@ android {
   buildTypes { release { minifyEnabled true; shrinkResources true; signingConfig signingConfigs.release } }
 }
 
+def keystorePropertiesFile = rootProject.file("android/keystore.properties")
+def keystoreProperties = new Properties()
+if (keystorePropertiesFile.exists()) {
+  keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+}
+android {
+  defaultConfig { applicationId "com.talaa.app.gh" }
+  signingConfigs {
+    release {
+      if (keystoreProperties['storeFile']) {
+        storeFile file(keystoreProperties['storeFile'])
+        storePassword keystoreProperties['storePassword']
+        keyAlias keystoreProperties['keyAlias']
+        keyPassword keystoreProperties['keyPassword']
+      }
+    }
+  }
+  buildTypes { release { minifyEnabled true; shrinkResources true; signingConfig signingConfigs.release } }
+}
+
 apply plugin: "com.android.application"
 apply plugin: "org.jetbrains.kotlin.android"
 apply plugin: "com.facebook.react"
