@@ -38,3 +38,5 @@ TalaaGHApp/android/build/
 TalaaGHApp/android/app/build/
 TalaaGHApp/android/local.properties
 TalaaGHApp/android/.cxx/
+# Ignore Android debug keystore
+TalaaGHApp/android/app/debug.keystore
