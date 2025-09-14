@@ -1,2 +1,20 @@
 android/keystore.properties
 TalaaGHApp/android/app/*.jks
+# === TalaaGHApp Android: build + secrets ===
+TalaaGHApp/android/keystore.properties
+TalaaGHApp/android/app/*.jks
+TalaaGHApp/android/app/*.keystore
+TalaaGHApp/android/app/*.keystore.properties
+
+# Gradle & build outputs
+TalaaGHApp/android/.gradle/
+TalaaGHApp/android/.idea/
+TalaaGHApp/android/build/
+TalaaGHApp/android/app/build/
+
+# Logs
+TalaaGHApp/android/**/*.log
+
+# Misc generated
+TalaaGHApp/android/local.properties
+TalaaGHApp/android/.cxx/
