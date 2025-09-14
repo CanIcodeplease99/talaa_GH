@@ -1,0 +1,11 @@
+{
+  "packageName": "com.talaa.app",
+  "listings": {
+    "en-US": {
+      "title": "Talaa",
+      "shortDescription": "Instant, secure money.",
+      "fullDescription": "Send, pay, split, discover. Fast, private, multi-rail."
+    }
+  },
+  "privacyPolicyUrl": "https://talaa.com/legal/gh/privacy"
+}
