@@ -1,0 +1,19 @@
+name: android-gh
+on: [workflow_dispatch]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with: { distribution: temurin, java-version: 17 }
+      - uses: gradle/gradle-build-action@v3
+      - name: Build GH
+        run: |
+          cd android
+          chmod +x gradlew || true
+          ./gradlew assembleRelease --stacktrace --info
+      - uses: actions/upload-artifact@v4
+        with:
+          name: talaaGH-apk
+          path: android/app/build/outputs/apk/release/*.apk
