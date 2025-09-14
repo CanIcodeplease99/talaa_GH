@@ -28,3 +28,13 @@ TalaaGHApp/android/build/
 TalaaGHApp/android/app/build/
 TalaaGHApp/android/local.properties
 TalaaGHApp/android/.cxx/
+# === Secrets & build artifacts to ignore ===
+TalaaGHApp/android/keystore.properties
+TalaaGHApp/android/app/*.jks
+TalaaGHApp/android/app/*.keystore
+TalaaGHApp/android/app/*.keystore.properties
+TalaaGHApp/android/.gradle/
+TalaaGHApp/android/build/
+TalaaGHApp/android/app/build/
+TalaaGHApp/android/local.properties
+TalaaGHApp/android/.cxx/
